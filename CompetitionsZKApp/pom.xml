@@ -101,6 +101,26 @@
             </exclusions>
         </dependency>
             
+<!-- ##### Persistence Libraries ##### -->
+        <!-- # NoSQL Driver for MongoDB # -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+        <!-- # EclipseLink JPA Library # -->
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.6.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.persistence</groupId>
+                    <artifactId>commonj.sdo</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+            
         <!-- ##### Google JSON Library ##### -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
