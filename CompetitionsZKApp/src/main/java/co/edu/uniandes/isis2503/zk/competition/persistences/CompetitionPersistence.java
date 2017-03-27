@@ -123,7 +123,7 @@ public class CompetitionPersistence {
     public Competition getCompetitionById(String id) {
         EntityManager em = entityManagerFactory.createEntityManager();
         Competition competition;
-        Query query = em.createQuery("Select e FROM Competition e WHERE e.id = :id");
+        Query query = em.createQuery("Select e FROM competition e WHERE e.id = :id");
         query.setParameter("id", id);
         try {
             competition = (Competition) query.getSingleResult();
@@ -139,7 +139,7 @@ public class CompetitionPersistence {
     public Competition getCompetitionByName(String name) {
         EntityManager em = entityManagerFactory.createEntityManager();
         Competition competition;
-        Query query = em.createQuery("Select c FROM Competition c where c.name=:name");
+        Query query = em.createQuery("Select c FROM competition c where c.name=:name");
         query.setParameter("name", name);
         try {
             competition = (Competition) query.getSingleResult();
@@ -155,7 +155,7 @@ public class CompetitionPersistence {
     public List<Competition> getCompetitions() {
         EntityManager em = entityManagerFactory.createEntityManager();
         List<Competition> competition;
-        Query query = em.createQuery("Select c FROM Competition c");
+        Query query = em.createQuery("Select c FROM competition c");
         try {
             competition = query.getResultList();
         } catch (NoResultException | NonUniqueResultException ex) {
