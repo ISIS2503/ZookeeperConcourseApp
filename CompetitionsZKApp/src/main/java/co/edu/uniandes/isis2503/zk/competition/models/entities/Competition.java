@@ -35,22 +35,17 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
-import org.eclipse.persistence.nosql.annotations.DataFormatType;
-import org.eclipse.persistence.nosql.annotations.Field;
-import org.eclipse.persistence.nosql.annotations.NoSql;
 
 /**
  * This class is a entity definition for Competition information.
  *
  * @author Luis Felipe Mendivelso Osorio <lf.mendivelso10@uniandes.edu.co>
  */
-@NoSql(dataFormat = DataFormatType.MAPPED)
-@Entity
+@Entity(name = "competition")
 public class Competition implements Serializable {
 
     @Id
     @GeneratedValue
-    @Field(name = "_id")
     private String id;
 
     @NotNull
